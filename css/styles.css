@@ -11,8 +11,8 @@
   --bg-bottom:   #fdf4f6;
   --surface:     #ffffff;
   --surface-soft:#fdf1f4;
-  --primary:     #e8607f;
-  --primary-dark:#c9435f;
+  --primary:     #ff678a;
+  --primary-dark:#ec8fa3;
   --primary-soft:#fce3e9;
   --ink:         #2b1820;
   --ink-soft:    #7a5866;
@@ -50,7 +50,7 @@ html, body{
 
 body{
   background:
-    radial-gradient(circle at 20% -10%, #c9ecdd 0%, transparent 55%),
+    radial-gradient(circle at 20% -10%, #f6b0b7 0%, transparent 55%),
     linear-gradient(180deg, var(--bg-top) 0%, var(--bg-bottom) 45%);
   min-height: 100vh;
   display:flex;
@@ -195,7 +195,7 @@ input, select{ font-family: inherit; }
 
 /* ---------- Escáner ---------- */
 .scanner-card{
-  background: linear-gradient(165deg, #14261c 0%, #0d1a13 100%);
+  background: linear-gradient(165deg, #bb6b7a 0%, #371622 100%);
   border-radius: var(--radius-lg);
   padding: 14px;
   margin-bottom: 16px;
