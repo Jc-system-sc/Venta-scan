@@ -6,7 +6,9 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   // Rellenamos el nombre del negocio en el encabezado y el avatar
-  document.getElementById("brand-name").textContent = NEGOCIO.nombre;
+  const partesNombre = NEGOCIO.nombre.split(" ");
+  const primera = partesNombre.shift();
+  document.getElementById("brand-name").innerHTML = `${primera} <em>${partesNombre.join(" ")}</em>`;
   document.getElementById("brand-avatar").textContent = NEGOCIO.inicial;
   document.title = NEGOCIO.nombre;
 
