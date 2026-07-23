@@ -63,6 +63,7 @@ button{ font-family: inherit; cursor:pointer; }
 input, select{ font-family: inherit; }
 
 /* ---------- Marco tipo teléfono ---------- */
+/* ---------- Contenedor principal de la app ---------- */
 .app-frame{
   width: 100%;
   max-width: 430px;
@@ -74,6 +75,9 @@ input, select{ font-family: inherit; }
   display: flex;
   flex-direction: column;
   position: relative;
+  /* Espacios internos para que el contenido no quede oculto bajo las barras fijas */
+  padding-top: 65px;    /* Deja espacio libre para el encabezado delgado */
+  padding-bottom: 150px; /* Deja espacio libre para la barra de total y la navegación */
 }
 
 /* ---------- Encabezado fijo ---------- */
@@ -83,7 +87,7 @@ input, select{ font-family: inherit; }
   left: 0;
   right: 0;
   z-index: 102;
-  padding: 22px 22px 18px;
+  padding: 22px 22px 8px;
   background: linear-gradient(180deg, #ffeaf1 0%, #ffffff 100%);
   display: flex;
   align-items: center;
