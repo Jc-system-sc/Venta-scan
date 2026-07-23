@@ -7,23 +7,23 @@
 
 :root{
   /* Paleta */
-  --bg-top:      #d9f0e4;
-  --bg-bottom:   #eef8f2;
+  --bg-top:      #fbe3ec;
+  --bg-bottom:   #fdf4f6;
   --surface:     #ffffff;
-  --surface-soft:#f3faf6;
-  --primary:     #2f9563;
-  --primary-dark:#1f7a4e;
-  --primary-soft:#e3f5ec;
-  --ink:         #17281f;
-  --ink-soft:    #5c7266;
-  --ink-faint:   #8ea297;
-  --line:        #e3efe8;
-  --amber:       #f6a94a;
-  --amber-soft:  #fdf1de;
-  --coral:       #f2685f;
-  --coral-soft:  #fde7e5;
-  --sky:         #4fa7d9;
-  --sky-soft:    #e6f3fb;
+  --surface-soft:#fdf1f4;
+  --primary:     #e8607f;
+  --primary-dark:#c9435f;
+  --primary-soft:#fce3e9;
+  --ink:         #2b1820;
+  --ink-soft:    #7a5866;
+  --ink-faint:   #b791a0;
+  --line:        #f3dbe3;
+  --amber:       #f2a154;
+  --amber-soft:  #fdefdc;
+  --coral:       #d94f4a;
+  --coral-soft:  #fbe3e1;
+  --sky:         #c98cd9;
+  --sky-soft:    #f4e7fa;
 
   /* Forma */
   --radius-xl: 32px;
@@ -210,11 +210,26 @@ input, select{ font-family: inherit; }
   background: #000;
 }
 
-#qr-reader{ width: 100% !important; }
+#qr-reader{
+  width: 100% !important;
+  height: 100% !important;
+  position: absolute !important;
+  inset: 0 !important;
+}
+#qr-reader > div{
+  width: 100% !important;
+  height: 100% !important;
+  position: absolute !important;
+  inset: 0 !important;
+}
 #qr-reader video{
   width: 100% !important;
   height: 100% !important;
-  object-fit: cover;
+  object-fit: cover !important;
+  object-position: center !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
 }
 #qr-reader img{ display:none !important; }
 
