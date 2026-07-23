@@ -522,21 +522,27 @@ input, select{ font-family: inherit; }
 .pill-coral{ background: var(--coral-soft); color: var(--coral); }
 .pill-sky{ background: var(--sky-soft); color: #7a3fa0; }
 
-/* ---------- Navegación inferior ---------- */
+/* ---------- Navegación inferior fija ---------- */
 .tab-bar{
-  display:flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 101;
+  display: flex;
   border-top: 1px solid var(--line);
   background: var(--surface);
   padding: 10px 8px calc(10px + env(safe-area-inset-bottom));
 }
+
 .tab-btn{
-  flex:1;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 4px;
-  border:none;
-  background:transparent;
+  border: none;
+  background: transparent;
   padding: 6px 4px;
   font-family: var(--font-body);
   color: var(--ink-faint);
@@ -545,10 +551,10 @@ input, select{ font-family: inherit; }
   letter-spacing: 0.02em;
   border-radius: 12px;
 }
+
 .tab-btn.active{ color: var(--primary-dark); font-weight: 700; }
 .tab-btn.active svg{ stroke: var(--primary-dark); }
 .tab-btn:active{ background: var(--surface-soft); }
-
 /* ---------- Lista de catálogo / precios ---------- */
 .list-row{
   display:flex;
