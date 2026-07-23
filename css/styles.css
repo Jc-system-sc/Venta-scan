@@ -6,18 +6,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@400;500;600;700;800&display=swap');
 
 :root{
-  /* Paleta */
-  --bg-top:      #ffe3ec;
-  --bg-bottom:   #fff5f8;
+  /* Paleta actualizada: Coral Pastel / Cálido */
+  --bg-top:      #fff1ee;
+  --bg-bottom:   #fffaf9;
   --surface:     #ffffff;
-  --surface-soft:#fdeef3;
-  --primary:     #ff6f91;
-  --primary-dark:#d6486b;
-  --primary-soft:#ffe0e9;
-  --ink:         #3a1520;
-  --ink-soft:    #7d5563;
-  --ink-faint:   #b78a99;
-  --line:        #f6dbe4;
+  --surface-soft:#fae9e7;
+  --primary:     #ff8b7d;
+  --primary-dark:#d95343;
+  --primary-soft:#fae1dd;
+  --ink:         #3b1a16;
+  --ink-soft:    #7e524c;
+  --ink-faint:   #b88a84;
+  --line:        #f5dcd8;
   --amber:       #f2a154;
   --amber-soft:  #fdefdc;
   --coral:       #e0483f;
@@ -87,19 +87,18 @@ input, select{ font-family: inherit; }
   left: 0;
   right: 0;
   z-index: 102;
-  padding: 22px 22px 8px;
+  padding: 22px 22px 2px;
   background: linear-gradient(180deg, #ffeaf1 0%, #ffffff 100%);
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  border-bottom: 1px solid var(--line);
 }
 
 .icon-btn{
-  width: 42px;
-  height: 42px;
-  border-radius: 14px;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
   border: none;
   background: var(--surface-soft);
   display: flex;
@@ -114,19 +113,19 @@ input, select{ font-family: inherit; }
 .brand{
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
 }
 
 .brand-avatar{
-  width: 46px;
-  height: 46px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
   background: linear-gradient(160deg, var(--primary) 0%, var(--primary-dark) 100%);
   color: #fff;
   font-family: var(--font-display);
   font-style: italic;
   font-weight: 600;
-  font-size: 21px;
+  font-size: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -221,13 +220,14 @@ input, select{ font-family: inherit; }
   background: var(--surface-soft);
 }
 
-/* ---------- Escáner ---------- */
+/* ---------- Escáner con colores independientes ---------- */
 .scanner-card{
-  background: linear-gradient(165deg, #bb6b7a 0%, #371622 100%);
+  background: linear-gradient(165deg, #ffc9cb 0%, #efa3a8 100%); /* Cambia estos códigos por el tono pastel que te guste */
   border-radius: var(--radius-lg);
   padding: 14px;
   margin-bottom: 16px;
   position: relative;
+  box-shadow: 0 4px 15px rgba(239, 163, 168, 0.2);
 }
 
 .scanner-frame{
@@ -235,7 +235,7 @@ input, select{ font-family: inherit; }
   border-radius: var(--radius-md);
   overflow: hidden;
   aspect-ratio: 4 / 3;
-  background: #000;
+  background: #ffffff;
 }
 
 #qr-reader{
@@ -276,7 +276,7 @@ input, select{ font-family: inherit; }
   flex-direction:column;
   align-items:center;
   justify-content:center;
-  color: rgba(255,255,255,.75);
+  color: rgb(190, 111, 120);
   gap: 10px;
   text-align:center;
   padding: 20px;
@@ -328,7 +328,7 @@ input, select{ font-family: inherit; }
 .btn-primary{ background: var(--primary); color:#fff; box-shadow: 0 10px 20px rgba(255, 111, 145, .35); }
 .btn-primary:hover:not(:disabled){ filter: brightness(1.05); }
 
-.btn-dark{ background:#3a1520; color:#fff; }
+.btn-dark{ background:#c98089; color:#fff; }
 
 .btn-outline{ background: transparent; color: var(--primary-dark); border: 1.5px solid var(--primary); }
 
@@ -797,4 +797,26 @@ input, select{ font-family: inherit; }
 @media (max-width: 460px){
   body{ padding: 0; }
   .app-frame{ min-height: 100vh; border-radius: 0; max-width: 100%; }
+}
+.store-awning-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 102;
+  height: 105px; /* Altura ideal del toldo en celular */
+  background-image: url('../img/toldo.png'); /* Ruta de tu imagen */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 12px;
+}
+
+.awning-guia-btn {
+  background: rgba(255, 255, 255, 0.85); /* Fondo translúcido para el botón */
+  backdrop-filter: blur(4px);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
