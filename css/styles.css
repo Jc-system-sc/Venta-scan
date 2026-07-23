@@ -1,39 +1,39 @@
 /* ==========================================================================
    COMERCIAL ROSITA — Hoja de estilos
-   Paleta: verde menta suave + tarjetas blancas redondeadas
+   Paleta: rosa pastel + coral, tarjetas blancas redondeadas
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@400;500;600;700;800&display=swap');
 
 :root{
   /* Paleta */
-  --bg-top:      #fbe3ec;
-  --bg-bottom:   #fdf4f6;
+  --bg-top:      #ffe3ec;
+  --bg-bottom:   #fff5f8;
   --surface:     #ffffff;
-  --surface-soft:#fdf1f4;
-  --primary:     #ff678a;
-  --primary-dark:#ec8fa3;
-  --primary-soft:#fce3e9;
-  --ink:         #2b1820;
-  --ink-soft:    #7a5866;
-  --ink-faint:   #b791a0;
-  --line:        #f3dbe3;
+  --surface-soft:#fdeef3;
+  --primary:     #ff6f91;
+  --primary-dark:#d6486b;
+  --primary-soft:#ffe0e9;
+  --ink:         #3a1520;
+  --ink-soft:    #8a5c6c;
+  --ink-faint:   #c398a8;
+  --line:        #f6dbe4;
   --amber:       #f2a154;
   --amber-soft:  #fdefdc;
-  --coral:       #d94f4a;
-  --coral-soft:  #fbe3e1;
-  --sky:         #c98cd9;
-  --sky-soft:    #f4e7fa;
+  --coral:       #e0483f;
+  --coral-soft:  #fbe1df;
+  --sky:         #a86bd1;
+  --sky-soft:    #f1e6fa;
 
   /* Forma */
   --radius-xl: 32px;
   --radius-lg: 24px;
   --radius-md: 16px;
   --radius-sm: 10px;
-  --shadow-card: 0 14px 34px rgba(23, 82, 54, 0.12);
-  --shadow-pop:  0 20px 50px rgba(15, 40, 27, 0.25);
+  --shadow-card: 0 14px 34px rgba(199, 60, 110, 0.16);
+  --shadow-pop:  0 20px 50px rgba(90, 20, 45, 0.28);
 
-  --font-display: 'Baloo 2', system-ui, sans-serif;
+  --font-display: 'Cormorant Garamond', 'Georgia', serif;
   --font-body: 'Inter', system-ui, sans-serif;
 }
 
@@ -50,7 +50,7 @@ html, body{
 
 body{
   background:
-    radial-gradient(circle at 20% -10%, #f6b0b7 0%, transparent 55%),
+    radial-gradient(circle at 20% -10%, #ffc3d3 0%, transparent 55%),
     linear-gradient(180deg, var(--bg-top) 0%, var(--bg-bottom) 45%);
   min-height: 100vh;
   display:flex;
@@ -79,7 +79,7 @@ input, select{ font-family: inherit; }
 /* ---------- Encabezado ---------- */
 .app-header{
   padding: 22px 22px 18px;
-  background: linear-gradient(180deg, #eaf8f1 0%, #ffffff 100%);
+  background: linear-gradient(180deg, #ffeaf1 0%, #ffffff 100%);
   display:flex;
   align-items:center;
   justify-content:space-between;
@@ -120,7 +120,7 @@ input, select{ font-family: inherit; }
   display:flex;
   align-items:center;
   justify-content:center;
-  box-shadow: 0 6px 14px rgba(31,122,78,.35);
+  box-shadow: 0 6px 14px rgba(214, 72, 107, .35);
 }
 
 .brand-text h1{
@@ -236,7 +236,7 @@ input, select{ font-family: inherit; }
 .scanner-overlay{
   position:absolute;
   inset: 14%;
-  border: 2px solid rgba(255,255,255,.65);
+  border: 2px solid rgba(255, 214, 226, .85);
   border-radius: 16px;
   pointer-events: none;
   box-shadow: 0 0 0 999px rgba(0,0,0,.25);
@@ -287,10 +287,10 @@ input, select{ font-family: inherit; }
 .btn:active{ transform: scale(.97); }
 .btn:disabled{ opacity:.45; cursor:not-allowed; }
 
-.btn-primary{ background: var(--primary); color:#fff; box-shadow: 0 10px 20px rgba(47,149,99,.28); }
+.btn-primary{ background: var(--primary); color:#fff; box-shadow: 0 10px 20px rgba(255, 111, 145, .35); }
 .btn-primary:hover:not(:disabled){ filter: brightness(1.05); }
 
-.btn-dark{ background:#16281d; color:#fff; }
+.btn-dark{ background:#3a1520; color:#fff; }
 
 .btn-outline{ background: transparent; color: var(--primary-dark); border: 1.5px solid var(--primary); }
 
@@ -367,7 +367,7 @@ input, select{ font-family: inherit; }
   color: var(--primary-dark);
   font-weight:700;
   display:flex; align-items:center; justify-content:center;
-  box-shadow: 0 2px 4px rgba(0,0,0,.06);
+  box-shadow: 0 2px 4px rgba(214, 72, 107, .12);
 }
 .qty-val{ font-size: 13px; font-weight:700; min-width: 16px; text-align:center; }
 
@@ -420,9 +420,9 @@ input, select{ font-family: inherit; }
   font-weight: 700;
 }
 .pill-green{ background: var(--primary-soft); color: var(--primary-dark); }
-.pill-amber{ background: var(--amber-soft); color: #a86420; }
+.pill-amber{ background: var(--amber-soft); color: #a8641f; }
 .pill-coral{ background: var(--coral-soft); color: var(--coral); }
-.pill-sky{ background: var(--sky-soft); color: #2c72a0; }
+.pill-sky{ background: var(--sky-soft); color: #7a3fa0; }
 
 /* ---------- Navegación inferior ---------- */
 .tab-bar{
@@ -495,7 +495,7 @@ input, select{ font-family: inherit; }
 .modal-backdrop{
   position: fixed;
   inset: 0;
-  background: rgba(13, 26, 19, 0.55);
+  background: rgba(58, 21, 32, 0.55);
   display:none;
   align-items:flex-end;
   justify-content:center;
@@ -537,7 +537,7 @@ input, select{ font-family: inherit; }
   left: 50%;
   bottom: 28px;
   transform: translate(-50%, 12px);
-  background: #16281d;
+  background: #3a1520;
   color:#fff;
   padding: 12px 18px;
   border-radius: 14px;
@@ -552,7 +552,7 @@ input, select{ font-family: inherit; }
   max-width: 88%;
 }
 .toast.show{ opacity:1; transform: translate(-50%, 0); }
-.toast.error{ background: #4a1f1c; }
+.toast.error{ background: #5c1f22; }
 
 /* ---------- Boleta ---------- */
 .receipt{
