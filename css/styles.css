@@ -76,13 +76,18 @@ input, select{ font-family: inherit; }
   position: relative;
 }
 
-/* ---------- Encabezado ---------- */
+/* ---------- Encabezado fijo ---------- */
 .app-header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 102;
   padding: 22px 22px 18px;
   background: linear-gradient(180deg, #ffeaf1 0%, #ffffff 100%);
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   gap: 12px;
   border-bottom: 1px solid var(--line);
 }
@@ -93,9 +98,9 @@ input, select{ font-family: inherit; }
   border-radius: 14px;
   border: none;
   background: var(--surface-soft);
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: var(--primary-dark);
   transition: transform .15s ease, background .15s ease;
 }
@@ -103,8 +108,8 @@ input, select{ font-family: inherit; }
 .icon-btn:active{ transform: scale(.92); }
 
 .brand{
-  display:flex;
-  align-items:center;
+  display: flex;
+  align-items: center;
   gap: 12px;
 }
 
@@ -113,14 +118,14 @@ input, select{ font-family: inherit; }
   height: 46px;
   border-radius: 50%;
   background: linear-gradient(160deg, var(--primary) 0%, var(--primary-dark) 100%);
-  color:#fff;
+  color: #fff;
   font-family: var(--font-display);
   font-style: italic;
   font-weight: 600;
   font-size: 21px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   box-shadow: 0 6px 14px rgba(214, 72, 107, .35);
 }
 
@@ -473,22 +478,28 @@ input, select{ font-family: inherit; }
 }
 .empty-state svg{ margin-bottom: 8px; opacity:.6; }
 
-/* ---------- Barra de total ---------- */
+/* ---------- Barra de total fija ---------- */
 .total-bar{
-  position: sticky;
-  bottom: 0;
+  position: fixed;
+  bottom: 60px; /* Se eleva para quedar justo encima de la barra de navegación inferior */
+  left: 0;
+  right: 0;
+  z-index: 101; /* Asegura que esté por encima del contenido y debajo de la barra inferior si se cruzan */
   background: var(--surface);
   border-top: 1px solid var(--line);
   padding: 14px 18px calc(14px + env(safe-area-inset-bottom));
-  display:flex;
-  flex-direction:column;
+  display: flex;
+  flex-direction: column;
   gap: 10px;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.04); /* Opcional: un pequeño sombreado para separarlo visualmente */
 }
+
 .total-row{
-  display:flex;
-  justify-content:space-between;
-  align-items:baseline;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 }
+
 .total-label{
   font-family: var(--font-body);
   font-size: 11px;
@@ -497,6 +508,7 @@ input, select{ font-family: inherit; }
   letter-spacing: 0.08em;
   color: var(--ink-soft);
 }
+
 /* Total: el número más importante de la pantalla -> serif cursiva, grande */
 .total-value{
   font-family: var(--font-display);

@@ -39,8 +39,8 @@ const firebaseConfig = {
 /* Nombre del negocio que aparece en el encabezado y en la boleta.
    Puedes cambiarlo aquí sin tocar el resto del código. */
 const NEGOCIO = {
-  nombre: "Comercial Rosita",
-  inicial: "R",
+  nombre: "Tienda......",
+  inicial: "x",
   moneda: "S/", // símbolo de moneda usado en toda la app
   whatsappCodigoPais: "51" // Perú. Cámbialo si vendes desde otro país.
 };
